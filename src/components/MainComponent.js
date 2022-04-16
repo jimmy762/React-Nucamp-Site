@@ -14,26 +14,27 @@ import CampsiteInfo from './CampsiteInfoComponent';
 
 
 class Main extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
             campsites: CAMPSITES,
             comments: COMMENTS,
             partners: PARTNERS,
-            promotions: PROMOTIONS,
+            promotions: PROMOTIONS
         };
     }
 
     render() {
         const HomePage = () => {
             return (
-                <Home 
+                <Home
                     campsite={this.state.campsites.filter(campsite => campsite.featured)[0]}
-                    comments={this.state.comments.filter(comments => comments.featured)[0]}
-                    partners={this.state.partners.filter(partners => partners.featured)[0]}
+                    promotion={this.state.promotions.filter(promotion => promotion.featured)[0]}
+                    partner={this.state.partners.filter(partner => partner.featured)[0]}
                 />
-            )
-        }
+            );
+        };
         return (
             <div>
                 <Header/>
