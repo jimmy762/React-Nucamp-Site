@@ -46,6 +46,7 @@ class CommentForm extends Component{
                             <div className="form-group">
                                 <Label htmlFor="rating">Rating</Label>
                                 <Control.select model=".rating" id="rating" name="rating" className="form-control">
+                                    <option disabled selected>-Please select-</option>
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
